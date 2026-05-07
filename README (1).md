@@ -7,7 +7,7 @@
 - ate então criei esse arquivo md para me apresentar e dizer que é um repositorio onde tera testes de aplicações que irei estar subindo aqui para vocês darem uma olhada e me darem um feedback ou me aconselhar sobre qual estrutura poderei utilizar ou ate mesmo boas praticas de uso. estou aberto a qualquer tipo de informação ou mensagem de apoio, obrigado a quem leu ate aqui.
 
 ## Divulgações
-- quem estiver afim de trocar um conhecimento e fazer um contato ou ate mesmo iniciar um projeto minhas redes socias estaram aqui para a gente conversar e botar a mão na massa!!! 
+- quem estiver afim de trocar um conhecimento e fazer um contato ou ate mesmo iniciar um projeto minhas redes socias estarão aqui para a gente conversar e botar a mão na massa!!! 
 
 |Linkedin| Instagram   | Discord  |
 |-       |-            |-         |
