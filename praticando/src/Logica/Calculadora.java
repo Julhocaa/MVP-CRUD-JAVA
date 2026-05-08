@@ -4,13 +4,14 @@ import java.util.*;
 public class Calculadora {
 
 
-    public int opcao;
 
 
-    public static void Calcular(int opcao) {
+
+    public static void Calcular() {
         Scanner insercaoDados = new Scanner(System.in);
 
-        opcao = opcao;
+        int opcao;
+
 
         do {
 
@@ -24,19 +25,19 @@ public class Calculadora {
 
             opcao = insercaoDados.nextInt();
 
-            if (opcao > 5 || opcao == 0) {
+            if (opcao <= 0 || opcao > 4) {
                 System.out.println("desculpe.. tente novamente");
 
 
             } else {
                 System.out.println("Digite 2 valores para fazer sua operação: ");
 
-                break;
+
             }
 
         }
 
-        while (opcao != 0 || opcao < 5);
+        while (opcao <= 0 || opcao > 4);
 
         double resultado = 0;
         double numeroUm = insercaoDados.nextDouble();
@@ -66,6 +67,12 @@ public class Calculadora {
         System.out.println("Resultado foi: " + resultado);
 
     }
+
+    static void main(String[] args) {
+
+        Calculadora.Calcular();
+    }
+
 }
 
 
