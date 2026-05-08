@@ -5,8 +5,6 @@ public class Calculadora {
 
 
 
-
-
     public static void Calcular() {
         Scanner insercaoDados = new Scanner(System.in);
 
@@ -68,10 +66,6 @@ public class Calculadora {
 
     }
 
-    static void main(String[] args) {
-
-        Calculadora.Calcular();
-    }
 
 }
 
