@@ -61,7 +61,11 @@ public class Principal {
             }
 
         }
-        System.out.println("Bem vindo de voltar: " + usuarioLog + "!!!!!");
+
+
+
+        moldeContaBanco contaBanco = new moldeContaBanco(200);
+
 
         List<String> contador = new ArrayList<>();
         Scanner numeroDigitado = new Scanner(System.in);
@@ -90,19 +94,22 @@ public class Principal {
         Scanner valorDigitado = new Scanner(System.in);
         switch (digite) {
 
-
             case "Saque":
-                System.out.println("qual valor?");
+                System.out.println("digite o valor do saque: ");
 
                 double quantiaSaque = valorDigitado.nextDouble();
 
                 if (quantiaSaque > 1000) {
                     System.out.println("Entre em contato com o banco para mais informações");
-                    return;
+                    break;
                 }else{
                     System.out.println("aguarde um momento ");
+                    System.out.println("valor de: " +quantiaSaque +"sacado com sucesso!!");
+
                 }
-                moldeContaBanco contaBanco = new moldeContaBanco();
+            case "Deposito":
+
+
 
 
         }
