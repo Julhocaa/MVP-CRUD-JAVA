@@ -12,14 +12,14 @@ public class moldeContaBanco extends MoldeCL {
 
 
     public moldeContaBanco(double saldo){
-        this.saldo = saldo;
+       this.saldo=saldo;
 
         System.out.println("Saldo Atual: "+saldo);
 
     }
 
-    public void fazerPix(){
-
+    public double setSaldo(double saldoAntigo, double saldoNovo){
+        return this.saldo = saldoAntigo-saldoNovo;
 
     }
 

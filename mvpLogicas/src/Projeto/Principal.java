@@ -64,12 +64,9 @@ public class Principal {
 
         }
 
-
         moldeContaBanco contaBanco = new moldeContaBanco(500);
         String usuarioBanco = usuario;
         System.out.println("Bem vindo de volta "+usuarioBanco);
-
-
 
         List<String> contador = new ArrayList<>();
         Scanner numeroDigitado = new Scanner(System.in);
@@ -80,10 +77,11 @@ public class Principal {
         contador.add("usuario");
         contador.add("senha");
         contador.add("pix");
-
-
-
         String digite;
+
+
+
+
         do {
 
             System.out.println("Qual serviço você ira utilizar hoje?");
@@ -98,25 +96,27 @@ public class Principal {
         } while (!contador.contains(digite));
 
         Scanner valorDigitado = new Scanner(System.in);
+        double quantiaSaque = valorDigitado.nextDouble();
+        double quantiaDeposito = valorDigitado.nextDouble();
         switch (digite) {
 
             case "Saque":
                 System.out.println("digite o valor do saque: ");
 
-                double quantiaSaque = valorDigitado.nextDouble();
-
                 if (quantiaSaque > 1000) {
                     System.out.println("Entre em contato com o banco para mais informações");
-                    break;
+
                 }else{
                     System.out.println("aguarde um momento estamos contado suas cedulas.... ");
                     System.out.println("valor de: " +quantiaSaque +" sacado com sucesso!!");
 
+                    double saldoAtualizado=contaBanco.setSaldo(500, quantiaSaque);
+                    System.out.println("Saldo atual: "+saldoAtualizado);
                 }
+                break;
             case "Deposito":
 
                 System.out.println("quanto você quer depositar?");
-                double quantiaDeposito = valorDigitado.nextDouble();
 
                 if(quantiaDeposito>5000){
                     System.out.println("Não aceitamos depostios maiores que 5000, por favor procurar um de nossos atendentes para fazer a verificação do seu caso");
@@ -131,7 +131,8 @@ public class Principal {
                 }
 
 
-
         }
+
+
     }
 }
