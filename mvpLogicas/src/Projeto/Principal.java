@@ -81,15 +81,16 @@ public class Principal {
         contador.add("Sair");
         String digite;
 
-
+        //Menu de Serviço
         do {
+
 
             System.out.println("Qual serviço você ira utilizar hoje?");
 
             System.out.println("Saque");
             System.out.println("Deposito");
             System.out.println("Extrato?");
-            System.out.println("Alterar usuario ou senha");
+            System.out.println("Conta");
             System.out.println("Sair");
             System.out.println("Digite");
             digite = numeroDigitado.nextLine();
@@ -116,13 +117,12 @@ public class Principal {
                 case "Deposito":
 
                     List<String> tiposDepositos = new ArrayList<>();
-                    tiposDepositos.add("Conta corrente");
+                    tiposDepositos.add("Conta Corrente");
                     tiposDepositos.add("Conta Poupança");
                     Scanner sc = new Scanner(System.in);
                     String digiteTipoDeposito;
 
                     do {
-
 
                         System.out.println("Escolha qual tipo de deposito sera feito");
 
@@ -140,6 +140,7 @@ public class Principal {
                                 System.out.println("Agradecemos por escolher o Bancos&Julios!!");
                                 System.out.println("Saldo: " + saldoAtualizado);
                                 break;
+
                             case "Conta Poupança":
 
                                 System.out.println("Insira a quantia a ser depositada em sua poupança");
@@ -158,9 +159,23 @@ public class Principal {
                     contaBanco.mostrarExtratoCorrente();
                     break;
 
+                case "Conta":
+                    Scanner usuarios = new Scanner(System.in);
+                    List<String>conta = new ArrayList<>();
+
+                    conta.add("Troca Usuario");
+                    conta.add("Troca Senha");
+
+                    switch(usuarios){
+
+
+                    String alterarUsuario = usuarios.nextLine();
+                    contaBanco.setUsuario(alterarUsuario);
+                }
+
                 case "Sair":
             }
 
-        }while(!contador.equals("Sair"));
+        }while(!digite.equals("Sair"));
     }
 }

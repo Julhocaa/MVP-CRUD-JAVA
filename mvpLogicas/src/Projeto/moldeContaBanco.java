@@ -7,7 +7,6 @@ import java.util.List;
 public class moldeContaBanco extends MoldeCL {
 
 
-
     double saldo;
     double saque;
     List<String>extrato = new ArrayList<>();
